@@ -26,7 +26,7 @@ import {
  TODO: Insert your API key below
  */
 var sharedProps = {
-  apiKey:"53F859C6-0996-417C-8CC3-CDDF2775C41C",
+  apiKey:"9BCF35AE-B77D-47E8-80FE-B57C335F19DA",
 }
 
 // Sets the default scene you want for AR and VR
@@ -99,8 +99,10 @@ export default class ViroSample extends Component {
   // Returns the ViroARSceneNavigator which will start the AR experience
   _getARNavigator() {
     return (
-      <ViroARSceneNavigator {...this.state.sharedProps}
-        initialScene={{scene: InitialARScene}} />
+      <ViroARSceneNavigator
+      apiKey="9BCF35AE-B77D-47E8-80FE-B57C335F19DA"
+      numberOfTrackedImages={1}
+      initialScene={{scene: InitialARScene}} />
     );
   }
 
