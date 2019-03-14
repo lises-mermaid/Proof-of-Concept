@@ -6,15 +6,7 @@ import { StyleSheet } from "react-native";
 
 import { ViroARScene, ViroText, ViroConstants, ViroVideo } from "react-viro";
 
-var styles = StyleSheet.create({
-  helloWorldTextStyle: {
-    fontFamily: "Arial",
-    fontSize: 30,
-    color: "#ffffff",
-    textAlignVertical: "center",
-    textAlign: "center"
-  }
-});
+
 
 export default class HelloWorldSceneAR extends Component {
   constructor() {
@@ -60,5 +52,15 @@ export default class HelloWorldSceneAR extends Component {
     }
   }
 }
+
+var styles = StyleSheet.create({
+  helloWorldTextStyle: {
+    fontFamily: "Arial",
+    fontSize: 30,
+    color: "#ffffff",
+    textAlignVertical: "center",
+    textAlign: "center"
+  }
+});
 
 module.exports = HelloWorldSceneAR;

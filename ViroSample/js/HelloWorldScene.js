@@ -4,7 +4,14 @@ import React, { Component } from "react";
 
 import { StyleSheet } from "react-native";
 
-import { ViroScene, ViroText, ViroVideo, Viro360Image } from "react-viro";
+import {
+  ViroScene,
+  ViroText,
+  ViroNode,
+  ViroVideo,
+  Viro360Image,
+  ViroImage,
+} from "react-viro";
 
 export default class HelloWorldScene extends Component {
   constructor() {
@@ -17,19 +24,35 @@ export default class HelloWorldScene extends Component {
     return (
       <ViroScene>
         <Viro360Image source={require("./res/guadalupe_360.jpg")} />
-        <ViroText
+        {/* <ViroText
           text="Hello World!"
           width={2}
           height={2}
           position={[0, 0, -2]}
           style={styles.helloWorldTextStyle}
-        />
-        <ViroVideo
-          source={require("../Pears.mp4")}
-          loop={true}
-          position={[0, 2, -5]}
-          scale={[2, 2, 0]}
-        />
+        /> */}
+        <ViroNode
+          position={[0, 0, -3]}
+          rotation={[0, 0, 0]}
+          scale={[1.5, 1.5, 1.5]}
+        >
+          <ViroVideo
+            source={require("../Pears.mp4")}
+            loop={true}
+            position={[0, 0]}
+            scale={[2, 2, 0]}
+          />
+          <ViroImage
+            height={1}
+            width={1}
+            position={[0, -1.5]}
+            rotation={[-45, 0, 0]}
+            source={{
+              uri:
+                "https://banner2.kisspng.com/20171207/48a/vector-cartoon-balloons-birthday-background-5a29b42bce1a04.9804184615126825398442.jpg"
+            }}
+          />
+        </ViroNode>
       </ViroScene>
     );
   }
